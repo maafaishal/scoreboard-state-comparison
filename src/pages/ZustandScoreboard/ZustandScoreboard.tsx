@@ -1,6 +1,6 @@
 import { useScoreboardStore } from "./store/scoreboardStore";
-import { ScoreboardLayout } from "../../components/ScoreboardLayout";
-import { TeamScore } from "../../components/TeamScore";
+import { Scoreboard } from "../../components/Scoreboard";
+import { ScoreboardScore } from "../../components/ScoreboardScore";
 
 function LeftTeamScore() {
   const team = useScoreboardStore((state) => state.teams[0]);
@@ -8,7 +8,7 @@ function LeftTeamScore() {
   const updateTeamName = useScoreboardStore((state) => state.updateTeamName);
 
   return (
-    <TeamScore
+    <ScoreboardScore
       team={team}
       updateScore={updateScore}
       updateTeamName={updateTeamName}
@@ -23,7 +23,7 @@ function RightTeamScore() {
   const updateTeamName = useScoreboardStore((state) => state.updateTeamName);
 
   return (
-    <TeamScore
+    <ScoreboardScore
       team={team}
       updateScore={updateScore}
       updateTeamName={updateTeamName}
@@ -36,7 +36,8 @@ export function ZustandScoreboard() {
   const resetGame = useScoreboardStore((state) => state.resetGame);
 
   return (
-    <ScoreboardLayout
+    <Scoreboard
+      title="Zustand"
       leftTeam={<LeftTeamScore />}
       rightTeam={<RightTeamScore />}
       onReset={resetGame}

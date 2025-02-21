@@ -2,8 +2,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { Provider } from "react-redux";
 import { store } from "./store/store";
 
-import { ScoreboardLayout } from "@/components/ScoreboardLayout";
-import { TeamScore } from "@/components/TeamScore";
+import { Scoreboard } from "@/components/Scoreboard";
+import { ScoreboardScore } from "@/components/ScoreboardScore";
 
 import { RootState } from "./store/store";
 import {
@@ -25,7 +25,7 @@ function LeftTeamScore() {
   };
 
   return (
-    <TeamScore
+    <ScoreboardScore
       team={team}
       updateScore={handleUpdateScore}
       updateTeamName={handleUpdateTeamName}
@@ -47,7 +47,7 @@ function RightTeamScore() {
   };
 
   return (
-    <TeamScore
+    <ScoreboardScore
       team={team}
       updateScore={handleUpdateScore}
       updateTeamName={handleUpdateTeamName}
@@ -64,7 +64,8 @@ export function Container() {
   };
 
   return (
-    <ScoreboardLayout
+    <Scoreboard
+      title="Redux"
       leftTeam={<LeftTeamScore />}
       rightTeam={<RightTeamScore />}
       onReset={handleResetGame}

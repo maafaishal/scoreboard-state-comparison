@@ -1,11 +1,11 @@
 import { ScoreboardProvider, useScoreboard } from "./context/ScoreboardContext";
-import { ScoreboardLayout } from "@/components/ScoreboardLayout";
-import { TeamScore } from "@/components/TeamScore";
+import { Scoreboard } from "@/components/Scoreboard";
+import { ScoreboardScore } from "@/components/ScoreboardScore";
 
 function LeftTeamScore() {
   const { teams, updateScore, updateTeamName } = useScoreboard();
   return (
-    <TeamScore
+    <ScoreboardScore
       team={teams[0]}
       updateScore={updateScore}
       updateTeamName={updateTeamName}
@@ -17,7 +17,7 @@ function LeftTeamScore() {
 function RightTeamScore() {
   const { teams, updateScore, updateTeamName } = useScoreboard();
   return (
-    <TeamScore
+    <ScoreboardScore
       team={teams[1]}
       updateScore={updateScore}
       updateTeamName={updateTeamName}
@@ -30,7 +30,8 @@ function Container() {
   const { resetGame } = useScoreboard();
 
   return (
-    <ScoreboardLayout
+    <Scoreboard
+      title="Context"
       leftTeam={<LeftTeamScore />}
       rightTeam={<RightTeamScore />}
       onReset={resetGame}

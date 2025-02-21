@@ -3,19 +3,19 @@ import { Team } from "@/types/team";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 
-interface TeamScoreProps {
+interface ScoreboardScoreProps {
   team: Team;
   updateScore: (id: number, increment: boolean) => void;
   updateTeamName: (id: number, newName: string) => void;
   position: "left" | "right";
 }
 
-export function TeamScore({
+export function ScoreboardScore({
   team,
   updateScore,
   updateTeamName,
   position,
-}: TeamScoreProps) {
+}: ScoreboardScoreProps) {
   const renderCount = useRef(0);
 
   useEffect(() => {
