@@ -1,6 +1,6 @@
-# Scoreboard with Context, Redux, and Zustand State Managements
+# Scoreboard with Context, Redux, Zustand, and TanStack State Managements
 
-A practical demonstration of different state management approaches in React, comparing React Context, Redux, and Zustand through an interactive scoreboard application.
+A practical demonstration of different state management approaches in React, comparing React Context, Redux, Zustand, and TanStack Store through an interactive scoreboard application.
 
 ![image](https://github.com/user-attachments/assets/582684e5-13f1-4de8-a5ee-e1a3e662bf62)
 
@@ -30,6 +30,7 @@ A practical demonstration of different state management approaches in React, com
 - **React Context** - Built-in state management
 - **Redux Toolkit** - Modern Redux with less boilerplate
 - **Zustand** - Lightweight state management
+- **TanStack Store** - Framework agnostic type-safe store w/ reactive framework adapters
 
 ### Routing & Navigation
 
@@ -46,9 +47,10 @@ This project aims to:
 
 1. **Compare State Management Solutions**
 
-   - React Context (Built-in solution)
-   - Redux (Traditional state management)
-   - Zustand (Modern, lightweight alternative)
+   - React Context
+   - Redux
+   - Zustand
+   - TanStack Store
 
 2. **Demonstrate Re-rendering Behavior**
    - Visualize component re-renders in real-time
@@ -146,9 +148,20 @@ src/
      - Might be overkill for simple apps
 
 3. **Zustand**
+
    - Pros:
      - Minimal boilerplate
      - Easy to learn
      - Great performance
    - Cons:
      - Less established ecosystem
+
+4. **TanStack Store**
+
+   - Pros:
+     - Fine-grained updates
+     - Simple API with powerful patterns
+     - Built by creators of TanStack Query (trustworthy)
+   - Cons:
+     - Relatively new and evolving
+     - Smaller community and ecosystem (for now)
