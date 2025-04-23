@@ -10,6 +10,7 @@ function Navigation() {
     { value: "/", label: "Context" },
     { value: "/zustand", label: "Zustand" },
     { value: "/redux", label: "Redux" },
+    { value: "/tanstack", label: "Tanstack" },
   ];
 
   return (
